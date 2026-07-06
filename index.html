@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniPrints Shop — Impresiones 3D en México</title>
+  <meta name="description" content="Figuras articuladas, decoración, joyería y piezas funcionales impresas en 3D. Envío a toda la República Mexicana.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-hex">MP</div>
+      MiniPrints
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#footer">Contacto</a>
+    </div>
+    <div class="nav-actions">
+      <a href="carrito.html" class="cart-btn">
+        🛒 <span class="cart-badge hidden" id="cart-badge">0</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menú">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-panel">
+    <button class="close-btn" id="mobile-menu-close">✕</button>
+    <a href="index.html">Inicio</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="carrito.html">🛒 Carrito</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">✨ Impresiones 3D en México</div>
+        <h1>Diseño que puedes <span>tocar y coleccionar</span></h1>
+        <p>Figuras articuladas, decoración, joyería y piezas funcionales impresas en 3D con los mejores materiales. Envío a toda la República.</p>
+        <div class="hero-ctas">
+          <a href="tienda.html" class="btn btn-primary btn-lg">Ver catálogo →</a>
+          <a href="#categorias" class="btn btn-outline btn-lg">Ver categorías</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-badge-grid">
+          <div class="hero-badge">
+            <div class="badge-icon">🚀</div>
+            <div class="badge-value">2–7 días</div>
+            <div class="badge-label">Tiempo de entrega</div>
+          </div>
+          <div class="hero-badge">
+            <div class="badge-icon">🎨</div>
+            <div class="badge-value">+8 colores</div>
+            <div class="badge-label">Por producto</div>
+          </div>
+          <div class="hero-badge">
+            <div class="badge-icon">✅</div>
+            <div class="badge-value">100% PLA</div>
+            <div class="badge-label">Material premium</div>
+          </div>
+          <div class="hero-badge">
+            <div class="badge-icon">🛡️</div>
+            <div class="badge-value">Garantía</div>
+            <div class="badge-label">En cada pieza</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORÍAS -->
+<section class="section" id="categorias">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>Explora por categoría</h2>
+        <p>Encuentra exactamente lo que buscas</p>
+      </div>
+      <a href="tienda.html" class="btn btn-ghost btn-sm">Ver todo →</a>
+    </div>
+    <div class="categories-grid" id="cat-grid">
+      <!-- Inyectado por JS -->
+      <div class="skeleton" style="height:110px;border-radius:14px"></div>
+      <div class="skeleton" style="height:110px;border-radius:14px"></div>
+      <div class="skeleton" style="height:110px;border-radius:14px"></div>
+      <div class="skeleton" style="height:110px;border-radius:14px"></div>
+      <div class="skeleton" style="height:110px;border-radius:14px"></div>
+      <div class="skeleton" style="height:110px;border-radius:14px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTOS DESTACADOS -->
+<section class="section" style="background:var(--white); padding-bottom:80px">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>⭐ Productos destacados</h2>
+        <p>Los más populares de nuestra tienda</p>
+      </div>
+      <a href="tienda.html" class="btn btn-ghost btn-sm">Ver todos →</a>
+    </div>
+    <div class="products-grid" id="featured-grid">
+      <!-- Inyectado por JS -->
+      <div class="skeleton" style="height:340px;border-radius:14px"></div>
+      <div class="skeleton" style="height:340px;border-radius:14px"></div>
+      <div class="skeleton" style="height:340px;border-radius:14px"></div>
+      <div class="skeleton" style="height:340px;border-radius:14px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER PERSONALIZADO -->
+<section class="section" style="padding:48px 0">
+  <div class="container">
+    <div style="background:linear-gradient(135deg,var(--dark),#2d2d30);border-radius:22px;padding:48px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--primary);margin-bottom:8px;">✨ Pedido personalizado</div>
+        <h3 style="font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:8px;">¿Tienes una idea en mente?</h3>
+        <p style="color:rgba(255,255,255,.6);max-width:420px;font-size:.9rem;">Mándanos tu diseño, descripción o archivo STL y lo hacemos realidad. Figuras únicas, piezas técnicas o cualquier cosa que imagines.</p>
+      </div>
+      <a href="tienda.html?cat=personalizado" class="btn btn-primary btn-lg">Cotizar personalizado →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">
+          <div class="logo-hex" style="width:28px;height:28px;font-size:.65rem">MP</div>
+          MiniPrints Shop
+        </div>
+        <p>Impresiones 3D de calidad, diseñadas y fabricadas en México. Envío a toda la República.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tienda</h4>
+        <a href="tienda.html">Todos los productos</a>
+        <a href="tienda.html?cat=figuras">Figuras</a>
+        <a href="tienda.html?cat=funcional">Piezas Funcionales</a>
+        <a href="tienda.html?cat=personalizado">Personalizado</a>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <a href="#">Cómo comprar</a>
+        <a href="#">Envíos y entregas</a>
+        <a href="#">Devoluciones</a>
+        <a href="#">Preguntas frecuentes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="#">WhatsApp</a>
+        <a href="#">Instagram</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 MiniPrints Shop. Hecho en México 🇲🇽</span>
+      <a href="#">Aviso de privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/app.js"></script>
+<script>initIndex();</script>
+</body>
+</html>

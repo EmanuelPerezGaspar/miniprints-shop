@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda — MiniPrints Shop</title>
+  <meta name="description" content="Catálogo completo de impresiones 3D: figuras, decoración, joyería, piezas funcionales y personalizados.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-hex">MP</div>
+      MiniPrints
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="tienda.html" class="active">Tienda</a>
+    </div>
+    <div class="nav-actions">
+      <a href="carrito.html" class="cart-btn">
+        🛒 <span class="cart-badge hidden" id="cart-badge">0</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menú">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-panel">
+    <button class="close-btn" id="mobile-menu-close">✕</button>
+    <a href="index.html">Inicio</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="carrito.html">🛒 Carrito</a>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span>/</span>
+      <span>Tienda</span>
+    </div>
+    <h1>Tienda</h1>
+    <p>Impresiones 3D de calidad, listas para enviar</p>
+  </div>
+</div>
+
+<!-- TIENDA -->
+<section class="section" style="padding-top:32px">
+  <div class="container">
+    <div class="shop-layout">
+
+      <!-- Sidebar / Filtros -->
+      <aside class="shop-sidebar">
+        <div class="sidebar-section">
+          <h3>Categorías</h3>
+          <div class="filter-list" id="filter-list">
+            <!-- Inyectado por JS -->
+            <div class="skeleton" style="height:36px;border-radius:8px;margin-bottom:4px"></div>
+            <div class="skeleton" style="height:36px;border-radius:8px;margin-bottom:4px"></div>
+            <div class="skeleton" style="height:36px;border-radius:8px;margin-bottom:4px"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Grid principal -->
+      <main class="shop-main">
+        <div class="shop-toolbar">
+          <div class="search-bar">
+            <span class="search-icon">🔍</span>
+            <input type="search" id="search-input" placeholder="Buscar productos…" autocomplete="off">
+          </div>
+          <select class="sort-select" id="sort-select">
+            <option value="destacado">Destacados primero</option>
+            <option value="nuevo">Más nuevos</option>
+            <option value="precio_asc">Menor precio</option>
+            <option value="precio_desc">Mayor precio</option>
+          </select>
+          <span class="results-count" id="results-count"></span>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+          <!-- Inyectado por JS -->
+          <div class="skeleton" style="height:320px;border-radius:14px"></div>
+          <div class="skeleton" style="height:320px;border-radius:14px"></div>
+          <div class="skeleton" style="height:320px;border-radius:14px"></div>
+          <div class="skeleton" style="height:320px;border-radius:14px"></div>
+          <div class="skeleton" style="height:320px;border-radius:14px"></div>
+          <div class="skeleton" style="height:320px;border-radius:14px"></div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">
+          <div class="logo-hex" style="width:28px;height:28px;font-size:.65rem">MP</div>
+          MiniPrints Shop
+        </div>
+        <p>Impresiones 3D de calidad, diseñadas y fabricadas en México.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tienda</h4>
+        <a href="tienda.html?cat=figuras">Figuras</a>
+        <a href="tienda.html?cat=funcional">Funcional</a>
+        <a href="tienda.html?cat=decoracion">Decoración</a>
+        <a href="tienda.html?cat=personalizado">Personalizado</a>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <a href="#">Envíos</a>
+        <a href="#">Devoluciones</a>
+        <a href="#">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="#">WhatsApp</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 MiniPrints Shop. Hecho en México 🇲🇽</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/app.js"></script>
+<script>initTienda();</script>
+</body>
+</html>

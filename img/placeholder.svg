@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#F2F2F7"/>
+  <polygon points="200,80 310,140 310,260 200,320 90,260 90,140" fill="none" stroke="#E5E5EA" stroke-width="3"/>
+  <polygon points="200,110 285,157 285,250 200,297 115,250 115,157" fill="#E5E5EA"/>
+  <polygon points="200,110 285,157 200,205 115,157" fill="#D1D1D6"/>
+  <polygon points="200,205 285,157 285,250 200,297" fill="#AEAEB2"/>
+  <polygon points="200,205 115,157 115,250 200,297" fill="#C7C7CC"/>
+  <text x="200" y="355" font-family="-apple-system,sans-serif" font-size="14" fill="#AEAEB2" text-anchor="middle">Imagen del producto</text>
+</svg>

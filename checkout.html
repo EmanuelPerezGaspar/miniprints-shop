@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — MiniPrints Shop</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-hex">MP</div>
+      MiniPrints
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+    </div>
+    <div class="nav-actions">
+      <a href="carrito.html" class="cart-btn">
+        🛒 <span class="cart-badge hidden" id="cart-badge">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span>/</span>
+      <a href="carrito.html">Carrito</a>
+      <span>/</span>
+      <span>Checkout</span>
+    </div>
+    <h1>Finalizar pedido</h1>
+    <p>Completa tus datos y confirma tu pedido por WhatsApp</p>
+  </div>
+</div>
+
+<!-- CHECKOUT -->
+<div class="checkout-page">
+  <div class="container">
+    <div class="checkout-layout">
+
+      <!-- Formulario -->
+      <div>
+
+        <!-- Datos personales -->
+        <div class="form-card">
+          <h3>👤 Datos del comprador</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre completo *</label>
+              <input type="text" id="field-nombre" placeholder="Tu nombre" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label>Teléfono *</label>
+              <input type="tel" id="field-telefono" placeholder="55 1234 5678" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Correo electrónico *</label>
+            <input type="email" id="field-email" placeholder="tu@correo.com" autocomplete="email">
+          </div>
+        </div>
+
+        <!-- Dirección de envío -->
+        <div class="form-card">
+          <h3>📍 Dirección de entrega</h3>
+          <div class="form-group">
+            <label>Calle y número *</label>
+            <input type="text" id="field-calle" placeholder="Av. Reforma 123, Int. 4">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Colonia *</label>
+              <input type="text" id="field-colonia" placeholder="Colonia Centro">
+            </div>
+            <div class="form-group">
+              <label>Código postal</label>
+              <input type="text" id="field-cp" placeholder="06600" maxlength="5">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Ciudad / Municipio *</label>
+            <input type="text" id="field-ciudad" placeholder="Ciudad de México">
+          </div>
+          <div class="form-group">
+            <label>Estado</label>
+            <select id="field-estado">
+              <option value="">— Selecciona —</option>
+              <option>Aguascalientes</option><option>Baja California</option>
+              <option>Baja California Sur</option><option>Campeche</option>
+              <option>Chiapas</option><option>Chihuahua</option>
+              <option>Ciudad de México</option><option>Coahuila</option>
+              <option>Colima</option><option>Durango</option>
+              <option>Estado de México</option><option>Guanajuato</option>
+              <option>Guerrero</option><option>Hidalgo</option>
+              <option>Jalisco</option><option>Michoacán</option>
+              <option>Morelos</option><option>Nayarit</option>
+              <option>Nuevo León</option><option>Oaxaca</option>
+              <option>Puebla</option><option>Querétaro</option>
+              <option>Quintana Roo</option><option>San Luis Potosí</option>
+              <option>Sinaloa</option><option>Sonora</option>
+              <option>Tabasco</option><option>Tamaulipas</option>
+              <option>Tlaxcala</option><option>Veracruz</option>
+              <option>Yucatán</option><option>Zacatecas</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Notas adicionales -->
+        <div class="form-card">
+          <h3>📝 Notas del pedido (opcional)</h3>
+          <div class="form-group">
+            <textarea id="field-notas" placeholder="Instrucciones especiales, aclaraciones de color, horario de entrega preferido…"></textarea>
+          </div>
+        </div>
+
+        <!-- Método de pago -->
+        <div class="form-card">
+          <h3>💳 Método de pago</h3>
+          <div class="payment-options">
+            <label class="payment-option selected">
+              <input type="radio" name="pago" value="whatsapp" checked>
+              <div class="payment-option-info">
+                <div class="po-name">Coordinar por WhatsApp</div>
+                <div class="po-desc">Confirma tu pedido y recibe un enlace de pago por WhatsApp (MercadoPago, transferencia, etc.)</div>
+              </div>
+              <span class="po-logo">💬</span>
+            </label>
+
+            <label class="payment-option" style="opacity:.6;cursor:not-allowed" title="Próximamente">
+              <input type="radio" name="pago" value="mercadopago" disabled>
+              <div class="payment-option-info">
+                <div class="po-name">MercadoPago <span style="font-size:.65rem;background:var(--warning);color:#fff;padding:1px 6px;border-radius:4px;margin-left:4px">Próximamente</span></div>
+                <div class="po-desc">Paga directamente con tarjeta, OXXO o transferencia</div>
+              </div>
+              <span class="po-logo" style="font-size:1.2rem">
+                <span class="mp-badge">MP</span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Resumen del pedido -->
+      <aside>
+        <div class="order-summary">
+          <h3>Tu pedido</h3>
+          <div id="checkout-summary-items">
+            <!-- Inyectado por JS -->
+          </div>
+          <div style="height:12px"></div>
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span id="co-subtotal">—</span>
+          </div>
+          <div class="summary-line">
+            <span>Envío</span>
+            <span id="co-shipping">—</span>
+          </div>
+          <div class="summary-line total">
+            <span>Total</span>
+            <span id="co-total">—</span>
+          </div>
+
+          <div class="checkout-ctas" style="margin-top:20px">
+            <button class="whatsapp-btn" id="whatsapp-order-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.122 1.532 5.852L0 24l6.293-1.51A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.002-1.367l-.358-.214-3.74.897.928-3.65-.234-.374A9.795 9.795 0 0 1 2.18 12C2.18 6.567 6.567 2.18 12 2.18S21.818 6.567 21.818 12 17.433 21.818 12 21.818z"/>
+              </svg>
+              Confirmar por WhatsApp
+            </button>
+            <a href="carrito.html" class="btn btn-secondary btn-block">← Editar carrito</a>
+          </div>
+
+          <p style="font-size:.72rem;color:var(--gray-400);text-align:center;margin-top:12px;line-height:1.5">
+            🔒 Tu información es privada y segura.<br>
+            Recibirás confirmación de tu pedido por WhatsApp.
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025 MiniPrints Shop · <a href="tienda.html">Seguir comprando</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/app.js"></script>
+<script>
+  initCheckout();
+
+  // Highlight payment option on click
+  document.querySelectorAll('.payment-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+    });
+  });
+</script>
+</body>
+</html>
