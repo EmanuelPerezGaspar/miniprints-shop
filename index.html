@@ -50,71 +50,97 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-pattern"></div>
-  <div class="hero-dots"></div>
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-content">
-        <div class="hero-eyebrow">✦ Impresiones 3D en México</div>
-        <h1>Diseños únicos que<br><em>cobran vida</em></h1>
-        <p class="hero-sub">Figuras articuladas, decoración y piezas funcionales impresas en 3D con los mejores materiales. Cada pieza, un mundo.</p>
-        <div class="hero-ctas">
-          <a href="tienda.html" class="btn btn-primary btn-lg">Ver catálogo →</a>
-          <a href="#categorias" class="btn btn-outline-white btn-lg">Explorar categorías</a>
+  <div class="hero-inner">
+    <!-- Lado izquierdo: texto -->
+    <div class="hero-copy">
+      <div class="hero-eyebrow">✦ Impresiones 3D en México</div>
+      <h1>Diseños únicos<br>que <em>cobran vida</em></h1>
+      <p class="hero-sub">
+        Figuras articuladas, decoración y piezas funcionales
+        impresas en 3D con los mejores materiales. Cada pieza, un mundo.
+      </p>
+      <div class="hero-ctas">
+        <a href="tienda.html" class="btn btn-primary btn-lg">Ver catálogo →</a>
+        <a href="#categorias" class="btn btn-outline btn-lg">Explorar categorías</a>
+      </div>
+    </div>
+    <!-- Lado derecho: collage de productos -->
+    <div class="hero-products">
+      <div class="hero-product-tile">
+        <div class="hero-product-tile-placeholder">
+          <div class="tile-emoji">🗿</div>
+          <div class="tile-label">Figuras</div>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-card">
-          <div class="hero-card-icon">🗿</div>
-          <div>
-            <div class="hero-card-label">Coleccionables</div>
-            <div class="hero-card-value">Figuras articuladas</div>
-          </div>
+      <div class="hero-product-tile">
+        <div class="hero-product-tile-placeholder">
+          <div class="tile-emoji">🔧</div>
+          <div class="tile-label">Funcional</div>
         </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">🎨</div>
-          <div>
-            <div class="hero-card-label">Personalización</div>
-            <div class="hero-card-value">+8 colores</div>
-          </div>
+      </div>
+      <div class="hero-product-tile">
+        <div class="hero-product-tile-placeholder">
+          <div class="tile-emoji">💎</div>
+          <div class="tile-label">Joyería</div>
         </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">🚀</div>
-          <div>
-            <div class="hero-card-label">Entrega</div>
-            <div class="hero-card-value">2–7 días hábiles</div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">🛡️</div>
-          <div>
-            <div class="hero-card-label">Material</div>
-            <div class="hero-card-value">PLA premium</div>
-          </div>
+      </div>
+      <div class="hero-product-tile">
+        <div class="hero-product-tile-placeholder">
+          <div class="tile-emoji">🎨</div>
+          <div class="tile-label">Personalizado</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FEATURES STRIP -->
+<div style="border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="features-strip">
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <div class="feature-title">PLA premium</div>
+        <div class="feature-desc">Material de primera calidad, colores intensos y acabados limpios</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <div class="feature-title">Personalizable</div>
+        <div class="feature-desc">Elige color, texto o envíanos tu diseño</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📦</div>
+        <div class="feature-title">Envío a todo México</div>
+        <div class="feature-desc">2–7 días hábiles. Gratis desde $800 MXN</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <div class="feature-title">Pedido por WhatsApp</div>
+        <div class="feature-desc">Atención directa, sin complicaciones</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- CATEGORÍAS -->
 <section class="section" id="categorias">
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-tag">Explora</div>
-        <h2>¿Qué estás buscando?</h2>
-        <p>Selecciona una categoría para ver los productos disponibles</p>
+        <div class="section-label">Explora</div>
+        <h2>Compra por categoría</h2>
+        <p>Encuentra exactamente lo que buscas</p>
       </div>
-      <a href="tienda.html" class="btn btn-outline btn-sm">Ver todo →</a>
+      <a href="tienda.html" class="btn btn-secondary btn-sm">Ver todo →</a>
     </div>
     <div class="categories-grid" id="cat-grid">
-      <div class="skeleton" style="height:160px;border-radius:24px"></div>
-      <div class="skeleton" style="height:160px;border-radius:24px"></div>
-      <div class="skeleton" style="height:160px;border-radius:24px"></div>
-      <div class="skeleton" style="height:160px;border-radius:24px"></div>
-      <div class="skeleton" style="height:160px;border-radius:24px"></div>
-      <div class="skeleton" style="height:160px;border-radius:24px"></div>
+      <!-- Skeletons -->
+      <div class="skeleton" style="height:120px;border-radius:12px"></div>
+      <div class="skeleton" style="height:120px;border-radius:12px"></div>
+      <div class="skeleton" style="height:120px;border-radius:12px"></div>
+      <div class="skeleton" style="height:120px;border-radius:12px"></div>
+      <div class="skeleton" style="height:120px;border-radius:12px"></div>
+      <div class="skeleton" style="height:120px;border-radius:12px"></div>
     </div>
   </div>
 </section>
@@ -124,61 +150,33 @@
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-tag">⭐ Destacados</div>
-        <h2>Los más populares</h2>
-        <p>Los favoritos de nuestros clientes</p>
+        <div class="section-label">⭐ Más vendidos</div>
+        <h2>Los favoritos de nuestros clientes</h2>
       </div>
-      <a href="tienda.html" class="btn btn-outline btn-sm">Ver todos →</a>
+      <a href="tienda.html" class="btn btn-secondary btn-sm">Ver todos →</a>
     </div>
     <div class="products-grid" id="featured-grid">
-      <div class="skeleton" style="height:360px;border-radius:16px"></div>
-      <div class="skeleton" style="height:360px;border-radius:16px"></div>
-      <div class="skeleton" style="height:360px;border-radius:16px"></div>
-      <div class="skeleton" style="height:360px;border-radius:16px"></div>
-    </div>
-  </div>
-</section>
-
-<!-- POR QUÉ MINIPRINTS -->
-<section class="section">
-  <div class="container">
-    <div class="section-header" style="margin-bottom:32px">
-      <div>
-        <div class="section-tag">Nuestra diferencia</div>
-        <h2>¿Por qué elegir MiniPrints?</h2>
-      </div>
-    </div>
-    <div class="features-strip">
-      <div class="feature-card">
-        <div class="feature-icon">🏆</div>
-        <div class="feature-title">Material premium</div>
-        <div class="feature-desc">Usamos PLA de primera calidad. Colores intensos, acabados limpios y piezas que duran.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎨</div>
-        <div class="feature-title">Totalmente personalizable</div>
-        <div class="feature-desc">Elige color, texto o mándanos tu diseño. Lo hacemos realidad a tu medida.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📦</div>
-        <div class="feature-title">Envío a toda la República</div>
-        <div class="feature-desc">Entregamos en 2 a 7 días hábiles. Envío gratis en pedidos mayores a $800 MXN.</div>
-      </div>
+      <div class="skeleton" style="height:340px;border-radius:12px"></div>
+      <div class="skeleton" style="height:340px;border-radius:12px"></div>
+      <div class="skeleton" style="height:340px;border-radius:12px"></div>
+      <div class="skeleton" style="height:340px;border-radius:12px"></div>
     </div>
   </div>
 </section>
 
 <!-- BANNER PERSONALIZADO -->
-<section style="padding: 0 0 64px">
+<section class="section">
   <div class="container">
-    <div style="background:linear-gradient(135deg,#111,#222);border-radius:var(--radius-xl);padding:52px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden;">
-      <div style="position:absolute;right:0;top:0;bottom:0;width:40%;background:radial-gradient(ellipse at right,rgba(255,94,20,.2),transparent 70%);pointer-events:none"></div>
-      <div style="position:relative;z-index:1">
-        <div class="section-tag" style="background:rgba(255,94,20,.15);color:#FF8A5C;border:1px solid rgba(255,94,20,.25)">✨ 100% único</div>
-        <h3 style="font-size:1.6rem;font-weight:900;color:#fff;margin:10px 0 10px;font-family:'Nunito',sans-serif">¿Tienes una idea en mente?</h3>
-        <p style="color:rgba(255,255,255,.6);max-width:420px;font-size:.92rem;line-height:1.7">Diseños a tu medida, nombres, figuras o piezas técnicas. Si puedes imaginarlo, podemos imprimirlo.</p>
+    <div style="background:var(--dark);border-radius:var(--radius-xl);padding:56px 52px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;">
+      <div>
+        <div class="section-label" style="color:#FF8A5C">✨ Diseño a tu medida</div>
+        <h2 style="color:#fff;font-size:1.75rem;margin:8px 0 12px">¿Tienes una idea en mente?</h2>
+        <p style="color:rgba(255,255,255,.55);max-width:480px;font-size:.92rem;line-height:1.8">
+          Nombres, figuras, logos, piezas técnicas. Si puedes imaginarlo, podemos imprimirlo.
+          Cotización sin compromiso por WhatsApp.
+        </p>
       </div>
-      <a href="tienda.html?cat=personalizado" class="btn btn-primary btn-lg" style="position:relative;z-index:1">Cotizar personalizado →</a>
+      <a href="tienda.html?cat=personalizado" class="btn btn-primary btn-lg" style="white-space:nowrap">Cotizar ahora →</a>
     </div>
   </div>
 </section>
@@ -189,7 +187,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand-name">
-          <div class="logo-hex" style="width:30px;height:30px;font-size:.65rem">MP</div>
+          <div class="logo-hex" style="width:28px;height:28px;font-size:.62rem">MP</div>
           MiniPrints Shop
         </div>
         <p>Impresiones 3D de calidad, diseñadas y fabricadas en México. Envío a toda la República.</p>
@@ -216,7 +214,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 MiniPrints Shop. Hecho en México 🇲🇽</span>
+      <span>© 2025 MiniPrints Shop · Hecho en México 🇲🇽</span>
       <a href="#">Aviso de privacidad</a>
     </div>
   </div>
@@ -229,17 +227,11 @@
 <script src="js/firebase-shop.js"></script>
 <script src="js/app.js"></script>
 <script>
-// Render categorías con colores Wigglitz-style
 async function initIndex() {
   await loadData();
   updateCartBadge();
 
-  const grid = document.getElementById('featured-grid');
-  if (grid) {
-    const destacados = DATA.productos.filter(p => p.destacado !== false && p.disponible !== false).slice(0, 4);
-    renderGrid(grid, destacados.length ? destacados : DATA.productos.slice(0, 4));
-  }
-
+  // Categorías
   const catGrid = document.getElementById('cat-grid');
   if (catGrid) {
     const conteo = {};
@@ -249,8 +241,14 @@ async function initIndex() {
         <div class="cat-emoji">${c.icono}</div>
         <div class="cat-name">${c.nombre}</div>
         <div class="cat-count">${conteo[c.id] || 0} producto${(conteo[c.id] || 0) !== 1 ? 's' : ''}</div>
-        <div class="cat-arrow">→</div>
       </a>`).join('');
+  }
+
+  // Productos destacados
+  const grid = document.getElementById('featured-grid');
+  if (grid) {
+    const dest = DATA.productos.filter(p => p.destacado && p.disponible !== false).slice(0, 4);
+    renderGrid(grid, dest.length ? dest : DATA.productos.slice(0, 4));
   }
 }
 initIndex();
