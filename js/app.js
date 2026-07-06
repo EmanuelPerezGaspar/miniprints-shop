@@ -8,10 +8,28 @@ let filtroCategoria = 'todas';
 let busqueda = '';
 let orden = 'destacado';
 
-// ---- Carga de datos ----
+// ---- Carga de datos (JSON base + Firestore override) ----
 async function loadData() {
+  // Siempre carga el JSON base (categorías + datos default)
   const res = await fetch('data/products.json');
   DATA = await res.json();
+
+  // Intenta sobrescribir productos y config con datos en vivo de Firestore
+  try {
+    if (typeof ShopDB !== 'undefined') {
+      const ok = await ShopDB.init();
+      if (ok) {
+        const [fbProductos, fbConfig] = await Promise.all([
+          ShopDB.getProductos(),
+          ShopDB.getConfig()
+        ]);
+        if (fbProductos && fbProductos.length > 0) DATA.productos = fbProductos;
+        if (fbConfig) DATA.tienda = { ...DATA.tienda, ...fbConfig };
+      }
+    }
+  } catch (e) {
+    console.warn('[app] Usando datos JSON (Firestore no disponible):', e.message);
+  }
   return DATA;
 }
 
