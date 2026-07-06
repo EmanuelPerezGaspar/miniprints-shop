@@ -272,8 +272,56 @@
       overflow: hidden;
       border: 1.5px solid var(--gray-200);
       flex-shrink: 0;
+      cursor: pointer;
+      position: relative;
     }
     .img-preview-box img { width: 100%; height: 100%; object-fit: cover; }
+    .img-preview-box:hover::after {
+      content: '📷';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    /* Upload button */
+    .upload-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: var(--radius-full);
+      font-size: .8rem;
+      font-weight: 600;
+      border: 1.5px dashed var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .upload-btn:hover { background: var(--primary); color: #fff; }
+    .upload-btn:disabled { opacity: .5; pointer-events: none; }
+
+    /* Progress bar */
+    .upload-progress {
+      height: 4px;
+      background: var(--gray-200);
+      border-radius: 2px;
+      overflow: hidden;
+      display: none;
+      margin-top: 6px;
+    }
+    .upload-progress-bar {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: width .2s ease;
+      width: 0%;
+    }
 
     .modal-footer {
       display: flex;
@@ -388,15 +436,33 @@
 
     <form id="product-form" onsubmit="event.preventDefault(); saveProducto();">
 
-      <!-- Imagen preview + URL -->
+      <!-- Imagen -->
       <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px">
-        <div class="img-preview-box">
+        <div class="img-preview-box" onclick="document.getElementById('file-input').click()" title="Clic para cambiar foto">
           <img id="img-preview" src="img/placeholder.svg" alt="Preview">
         </div>
-        <div class="form-group" style="flex:1;margin:0">
-          <label>URL de la imagen</label>
-          <input type="url" id="f-imagen" placeholder="https://... (sube a ImgBB, Google Photos, etc.)">
-          <div style="font-size:.72rem;color:var(--gray-400);margin-top:4px">Sube tu foto a <a href="https://imgbb.com" target="_blank" style="color:var(--primary)">imgbb.com</a> y pega el link aquí</div>
+        <div style="flex:1">
+          <!-- Botón subir archivo -->
+          <div style="margin-bottom:8px">
+            <label>Foto del producto</label>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:4px">
+              <button type="button" class="upload-btn" id="upload-btn" onclick="document.getElementById('file-input').click()">
+                📷 Subir foto desde mi dispositivo
+              </button>
+              <input type="file" id="file-input" accept="image/*" style="display:none" onchange="handleFileSelect(this.files[0])">
+            </div>
+            <div class="upload-progress" id="upload-progress">
+              <div class="upload-progress-bar" id="upload-progress-bar"></div>
+            </div>
+            <div id="upload-status" style="font-size:.72rem;color:var(--gray-400);margin-top:4px">
+              JPG, PNG o WEBP — máx 5 MB
+            </div>
+          </div>
+          <!-- URL manual (opcional) -->
+          <div class="form-group" style="margin:0">
+            <label style="color:var(--gray-400)">O pega una URL de imagen (opcional)</label>
+            <input type="url" id="f-imagen" placeholder="https://i.ibb.co/..." style="font-size:.8rem">
+          </div>
         </div>
       </div>
 
@@ -500,6 +566,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
 
 <script src="js/firebase-shop.js"></script>
 <script src="js/admin.js"></script>

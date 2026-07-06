@@ -14,9 +14,10 @@ const SHOP_FB_CONFIG = {
   appId:             "1:688625548823:web:984352167469cba3402652"
 };
 
-let _db   = null;
-let _auth = null;
-let _ready = false;
+let _db      = null;
+let _auth    = null;
+let _storage = null;
+let _ready   = false;
 
 const ShopDB = {
 
@@ -26,8 +27,9 @@ const ShopDB = {
       const app = firebase.apps.length
         ? firebase.app()
         : firebase.initializeApp(SHOP_FB_CONFIG);
-      _db   = firebase.firestore();
-      _auth = firebase.auth();
+      _db      = firebase.firestore();
+      _auth    = firebase.auth();
+      _storage = firebase.storage();
       await _auth.signInAnonymously();
       _ready = true;
       return true;
@@ -35,6 +37,22 @@ const ShopDB = {
       console.warn('[ShopDB] init falló:', e.message);
       return false;
     }
+  },
+
+  // ---- Storage: subir imagen de producto ----
+  uploadImage(file, onProgress) {
+    return new Promise((resolve, reject) => {
+      if (!_storage) { reject(new Error('Storage no inicializado')); return; }
+      const ext  = file.name.split('.').pop().toLowerCase();
+      const name = `shop_products/${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`;
+      const ref  = _storage.ref(name);
+      const task = ref.put(file);
+      task.on('state_changed',
+        snap => { if (onProgress) onProgress(Math.round(snap.bytesTransferred / snap.totalBytes * 100)); },
+        err  => reject(err),
+        async () => { resolve(await task.snapshot.ref.getDownloadURL()); }
+      );
+    });
   },
 
   // ---- Productos ----

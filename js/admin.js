@@ -6,6 +6,56 @@ let ADMIN_DATA = { tienda: {}, categorias: [], productos: [] };
 let editingId  = null;
 let activeTab  = 'productos';
 
+// ---- Upload de imagen a Firebase Storage ----
+async function handleFileSelect(file) {
+  if (!file) return;
+  if (file.size > 5 * 1024 * 1024) {
+    showToastAdmin('La imagen supera 5 MB', 'error');
+    return;
+  }
+
+  const btn      = document.getElementById('upload-btn');
+  const progress = document.getElementById('upload-progress');
+  const bar      = document.getElementById('upload-progress-bar');
+  const status   = document.getElementById('upload-status');
+  const imgInput = document.getElementById('f-imagen');
+
+  // Preview local inmediato
+  const localUrl = URL.createObjectURL(file);
+  updateImgPreview(localUrl);
+
+  btn.disabled = true;
+  btn.textContent = 'Subiendo…';
+  progress.style.display = 'block';
+  status.textContent = 'Subiendo imagen…';
+  status.style.color = 'var(--primary)';
+
+  try {
+    const url = await ShopDB.uploadImage(file, pct => {
+      bar.style.width = pct + '%';
+      status.textContent = `Subiendo… ${pct}%`;
+    });
+    imgInput.value = url;
+    updateImgPreview(url);
+    URL.revokeObjectURL(localUrl);
+    status.textContent = '✓ Foto subida correctamente';
+    status.style.color = 'var(--success)';
+    showToastAdmin('Foto subida ✓');
+  } catch (e) {
+    updateImgPreview('img/placeholder.svg');
+    imgInput.value = '';
+    status.textContent = '✕ Error: ' + e.message;
+    status.style.color = 'var(--danger)';
+    showToastAdmin('Error al subir: ' + e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '📷 Subir foto desde mi dispositivo';
+    progress.style.display = 'none';
+    bar.style.width = '0%';
+    document.getElementById('file-input').value = '';
+  }
+}
+
 // ---- PIN ----
 function checkPin() { return localStorage.getItem('shop_admin_ok') === '1'; }
 function logoutAdmin() {
