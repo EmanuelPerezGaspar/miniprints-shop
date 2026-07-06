@@ -27,9 +27,8 @@ const ShopDB = {
       const app = firebase.apps.length
         ? firebase.app()
         : firebase.initializeApp(SHOP_FB_CONFIG);
-      _db      = firebase.firestore();
-      _auth    = firebase.auth();
-      _storage = firebase.storage();
+      _db   = firebase.firestore();
+      _auth = firebase.auth();
       await _auth.signInAnonymously();
       _ready = true;
       return true;
@@ -39,10 +38,14 @@ const ShopDB = {
     }
   },
 
-  // ---- Storage: subir imagen de producto ----
+  // ---- Storage: subir imagen (solo admin — SDK cargada en admin.html) ----
   uploadImage(file, onProgress) {
     return new Promise((resolve, reject) => {
-      if (!_storage) { reject(new Error('Storage no inicializado')); return; }
+      if (!_storage) {
+        // Inicializar Storage solo cuando se necesita (solo admin tiene la SDK)
+        try { _storage = firebase.storage(); }
+        catch (e) { reject(new Error('Firebase Storage no disponible')); return; }
+      }
       const ext  = file.name.split('.').pop().toLowerCase();
       const name = `shop_products/${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`;
       const ref  = _storage.ref(name);
