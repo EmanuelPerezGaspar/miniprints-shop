@@ -12,14 +12,14 @@
 
 <!-- ANNOUNCE BAR -->
 <div class="announce-bar">
-  🚀 Envío gratis en pedidos mayores a <span>$800 MXN</span> &nbsp;·&nbsp; Tiempo de entrega: 2–7 días hábiles
+  🚀 Envío gratis en pedidos mayores a <strong>$800 MXN</strong> &nbsp;·&nbsp; Tiempo de entrega: 2–7 días hábiles
 </div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <div class="nav-container">
+  <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="logo-hex">MP</div>
+      <div class="logo-mark">MP</div>
       MiniPrints
     </a>
     <div class="nav-links">
@@ -28,7 +28,7 @@
       <a href="#categorias">Categorías</a>
       <a href="#footer">Contacto</a>
     </div>
-    <div class="nav-actions">
+    <div class="nav-right">
       <a href="carrito.html" class="cart-btn">
         🛒 Carrito <span class="cart-badge hidden" id="cart-badge">0</span>
       </a>
@@ -41,142 +41,166 @@
 <div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-panel">
     <button class="close-btn" id="mobile-menu-close">✕</button>
-    <a href="index.html">Inicio</a>
-    <a href="tienda.html">Tienda</a>
-    <a href="#categorias">Categorías</a>
+    <a href="index.html">🏠 Inicio</a>
+    <a href="tienda.html">🛍️ Tienda</a>
+    <a href="#categorias">📦 Categorías</a>
     <a href="carrito.html">🛒 Carrito</a>
   </div>
 </div>
 
-<!-- HERO -->
+<!-- ============================
+     HERO
+============================= -->
 <section class="hero">
-  <div class="hero-inner">
-    <!-- Lado izquierdo: texto -->
-    <div class="hero-copy">
+  <div class="container">
+    <div class="hero-body">
       <div class="hero-eyebrow">✦ Impresiones 3D en México</div>
-      <h1>Diseños únicos<br>que <em>cobran vida</em></h1>
+      <h1>
+        Diseños únicos que<br>
+        <span class="accent">cobran vida</span>
+      </h1>
       <p class="hero-sub">
-        Figuras articuladas, decoración y piezas funcionales
-        impresas en 3D con los mejores materiales. Cada pieza, un mundo.
+        Figuras articuladas, decoración y piezas funcionales impresas
+        con los mejores materiales. Cada pieza, un mundo.
       </p>
       <div class="hero-ctas">
         <a href="tienda.html" class="btn btn-primary btn-lg">Ver catálogo →</a>
-        <a href="#categorias" class="btn btn-outline btn-lg">Explorar categorías</a>
+        <a href="#categorias" class="btn btn-outline-w btn-lg">Explorar categorías</a>
       </div>
-    </div>
-    <!-- Lado derecho: collage de productos -->
-    <div class="hero-products">
-      <div class="hero-product-tile">
-        <div class="hero-product-tile-placeholder">
-          <div class="tile-emoji">🗿</div>
-          <div class="tile-label">Figuras</div>
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-num">120+</span>
+          <span class="hstat-label">Diseños disponibles</span>
         </div>
-      </div>
-      <div class="hero-product-tile">
-        <div class="hero-product-tile-placeholder">
-          <div class="tile-emoji">🔧</div>
-          <div class="tile-label">Funcional</div>
+        <div class="hstat">
+          <span class="hstat-num">100%</span>
+          <span class="hstat-label">Clientes satisfechos</span>
         </div>
-      </div>
-      <div class="hero-product-tile">
-        <div class="hero-product-tile-placeholder">
-          <div class="tile-emoji">💎</div>
-          <div class="tile-label">Joyería</div>
+        <div class="hstat">
+          <span class="hstat-num">2–7</span>
+          <span class="hstat-label">Días de entrega</span>
         </div>
-      </div>
-      <div class="hero-product-tile">
-        <div class="hero-product-tile-placeholder">
-          <div class="tile-emoji">🎨</div>
-          <div class="tile-label">Personalizado</div>
+        <div class="hstat">
+          <span class="hstat-num">PLA</span>
+          <span class="hstat-label">Material premium</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURES STRIP -->
-<div style="border-bottom:1px solid var(--border)">
+<!-- TICKER TAPE -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <!-- Doble para loop infinito -->
+    <span class="ticker-item">Figuras articuladas <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Decoración hogar <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Joyería única <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Piezas funcionales <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Diseños personalizados <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Coleccionables <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Envío a todo México <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Figuras articuladas <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Decoración hogar <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Joyería única <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Piezas funcionales <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Diseños personalizados <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Coleccionables <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Envío a todo México <span class="ticker-dot"></span></span>
+  </div>
+</div>
+
+<!-- ============================
+     FEATURES STRIP
+============================= -->
+<div style="border-bottom: 1.5px solid var(--gray-200);">
   <div class="container">
     <div class="features-strip">
-      <div class="feature-card">
-        <div class="feature-icon">🏆</div>
-        <div class="feature-title">PLA premium</div>
-        <div class="feature-desc">Material de primera calidad, colores intensos y acabados limpios</div>
+      <div class="feat-item reveal reveal-d1">
+        <div class="feat-icon">🏆</div>
+        <div class="feat-title">PLA premium</div>
+        <div class="feat-desc">Colores intensos, acabados limpios y piezas que duran</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎨</div>
-        <div class="feature-title">Personalizable</div>
-        <div class="feature-desc">Elige color, texto o envíanos tu diseño</div>
+      <div class="feat-item reveal reveal-d2">
+        <div class="feat-icon">🎨</div>
+        <div class="feat-title">Personalizable</div>
+        <div class="feat-desc">Tu diseño, nombre o idea hecha realidad</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📦</div>
-        <div class="feature-title">Envío a todo México</div>
-        <div class="feature-desc">2–7 días hábiles. Gratis desde $800 MXN</div>
+      <div class="feat-item reveal reveal-d3">
+        <div class="feat-icon">📦</div>
+        <div class="feat-title">Envío a toda la República</div>
+        <div class="feat-desc">2–7 días. Gratis desde $800 MXN</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">💬</div>
-        <div class="feature-title">Pedido por WhatsApp</div>
-        <div class="feature-desc">Atención directa, sin complicaciones</div>
+      <div class="feat-item reveal reveal-d4">
+        <div class="feat-icon">💬</div>
+        <div class="feat-title">Pedido por WhatsApp</div>
+        <div class="feat-desc">Atención directa, sin complicaciones</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- CATEGORÍAS -->
+<!-- ============================
+     CATEGORÍAS
+============================= -->
 <section class="section" id="categorias">
   <div class="container">
-    <div class="section-header">
+    <div class="section-top reveal">
       <div>
-        <div class="section-label">Explora</div>
+        <div class="section-eyebrow">Explora</div>
         <h2>Compra por categoría</h2>
-        <p>Encuentra exactamente lo que buscas</p>
+        <p>Selecciona una categoría para ver todos los productos</p>
       </div>
-      <a href="tienda.html" class="btn btn-secondary btn-sm">Ver todo →</a>
+      <a href="tienda.html" class="btn btn-outline btn-sm">Ver todo →</a>
     </div>
-    <div class="categories-grid" id="cat-grid">
-      <!-- Skeletons -->
-      <div class="skeleton" style="height:120px;border-radius:12px"></div>
-      <div class="skeleton" style="height:120px;border-radius:12px"></div>
-      <div class="skeleton" style="height:120px;border-radius:12px"></div>
-      <div class="skeleton" style="height:120px;border-radius:12px"></div>
-      <div class="skeleton" style="height:120px;border-radius:12px"></div>
-      <div class="skeleton" style="height:120px;border-radius:12px"></div>
+    <div class="cats-grid" id="cat-grid">
+      <!-- Skeletons mientras carga -->
+      <div class="skeleton" style="height:200px;border-radius:28px"></div>
+      <div class="skeleton" style="height:200px;border-radius:28px"></div>
+      <div class="skeleton" style="height:200px;border-radius:28px"></div>
+      <div class="skeleton" style="height:200px;border-radius:28px"></div>
+      <div class="skeleton" style="height:200px;border-radius:28px"></div>
+      <div class="skeleton" style="height:200px;border-radius:28px"></div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCTOS DESTACADOS -->
+<!-- ============================
+     PRODUCTOS DESTACADOS
+============================= -->
 <section class="section section-alt">
   <div class="container">
-    <div class="section-header">
+    <div class="section-top reveal">
       <div>
-        <div class="section-label">⭐ Más vendidos</div>
+        <div class="section-eyebrow">⭐ Más vendidos</div>
         <h2>Los favoritos de nuestros clientes</h2>
       </div>
-      <a href="tienda.html" class="btn btn-secondary btn-sm">Ver todos →</a>
+      <a href="tienda.html" class="btn btn-outline btn-sm">Ver todos →</a>
     </div>
     <div class="products-grid" id="featured-grid">
-      <div class="skeleton" style="height:340px;border-radius:12px"></div>
-      <div class="skeleton" style="height:340px;border-radius:12px"></div>
-      <div class="skeleton" style="height:340px;border-radius:12px"></div>
-      <div class="skeleton" style="height:340px;border-radius:12px"></div>
+      <div class="skeleton" style="height:340px;border-radius:14px"></div>
+      <div class="skeleton" style="height:340px;border-radius:14px"></div>
+      <div class="skeleton" style="height:340px;border-radius:14px"></div>
+      <div class="skeleton" style="height:340px;border-radius:14px"></div>
     </div>
   </div>
 </section>
 
-<!-- BANNER PERSONALIZADO -->
+<!-- ============================
+     CTA PERSONALIZADO
+============================= -->
 <section class="section">
   <div class="container">
-    <div style="background:var(--dark);border-radius:var(--radius-xl);padding:56px 52px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;">
-      <div>
-        <div class="section-label" style="color:#FF8A5C">✨ Diseño a tu medida</div>
-        <h2 style="color:#fff;font-size:1.75rem;margin:8px 0 12px">¿Tienes una idea en mente?</h2>
-        <p style="color:rgba(255,255,255,.55);max-width:480px;font-size:.92rem;line-height:1.8">
-          Nombres, figuras, logos, piezas técnicas. Si puedes imaginarlo, podemos imprimirlo.
-          Cotización sin compromiso por WhatsApp.
-        </p>
+    <div class="cta-banner reveal">
+      <div class="cta-content">
+        <div class="cta-eyebrow">✨ Diseño a tu medida</div>
+        <div class="cta-title">¿Tienes una idea en mente?</div>
+        <p class="cta-sub">Nombres, figuras, logos, piezas técnicas o regalos únicos.<br>Si puedes imaginarlo, podemos imprimirlo. Cotización sin compromiso.</p>
       </div>
-      <a href="tienda.html?cat=personalizado" class="btn btn-primary btn-lg" style="white-space:nowrap">Cotizar ahora →</a>
+      <div class="cta-action">
+        <a href="tienda.html?cat=personalizado" class="btn btn-primary btn-lg">Cotizar por WhatsApp →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -187,7 +211,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand-name">
-          <div class="logo-hex" style="width:28px;height:28px;font-size:.62rem">MP</div>
+          <div class="logo-mark" style="width:28px;height:28px;font-size:.62rem;border-radius:8px">MP</div>
           MiniPrints Shop
         </div>
         <p>Impresiones 3D de calidad, diseñadas y fabricadas en México. Envío a toda la República.</p>
@@ -200,7 +224,7 @@
         <a href="tienda.html?cat=personalizado">Personalizado</a>
       </div>
       <div class="footer-col">
-        <h4>Info</h4>
+        <h4>Información</h4>
         <a href="#">Cómo comprar</a>
         <a href="#">Envíos y entregas</a>
         <a href="#">Devoluciones</a>
@@ -220,6 +244,7 @@
   </div>
 </footer>
 
+<!-- SCRIPTS -->
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
@@ -227,28 +252,55 @@
 <script src="js/firebase-shop.js"></script>
 <script src="js/app.js"></script>
 <script>
+/* ---- Mobile menu ---- */
+document.getElementById('menu-toggle').addEventListener('click', () =>
+  document.getElementById('mobile-menu').classList.add('open'));
+document.getElementById('mobile-menu-close').addEventListener('click', () =>
+  document.getElementById('mobile-menu').classList.remove('open'));
+document.getElementById('mobile-menu').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.remove('open');
+});
+
+/* ---- Scroll reveal ---- */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ---- Carga de datos ---- */
 async function initIndex() {
   await loadData();
   updateCartBadge();
 
-  // Categorías
+  /* Categorías */
   const catGrid = document.getElementById('cat-grid');
   if (catGrid) {
     const conteo = {};
     DATA.productos.forEach(p => { conteo[p.categoria] = (conteo[p.categoria] || 0) + 1; });
-    catGrid.innerHTML = DATA.categorias.map(c => `
-      <a href="tienda.html?cat=${c.id}" class="category-card" data-cat="${c.id}">
-        <div class="cat-emoji">${c.icono}</div>
+    catGrid.innerHTML = DATA.categorias.map((c, i) => `
+      <a href="tienda.html?cat=${c.id}"
+         class="cat-card reveal reveal-d${(i % 6) + 1}"
+         data-cat="${c.id}"
+         data-emoji="${c.icono}">
         <div class="cat-name">${c.nombre}</div>
-        <div class="cat-count">${conteo[c.id] || 0} producto${(conteo[c.id] || 0) !== 1 ? 's' : ''}</div>
+        <div class="cat-meta">
+          <span class="cat-count">${conteo[c.id] || 0} producto${(conteo[c.id]||0)!==1?'s':''}</span>
+          <span class="cat-arrow">→</span>
+        </div>
       </a>`).join('');
+    /* re-observar las nuevas tarjetas */
+    catGrid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   }
 
-  // Productos destacados
+  /* Productos destacados */
   const grid = document.getElementById('featured-grid');
   if (grid) {
     const dest = DATA.productos.filter(p => p.destacado && p.disponible !== false).slice(0, 4);
     renderGrid(grid, dest.length ? dest : DATA.productos.slice(0, 4));
+    grid.querySelectorAll('.product-card').forEach((el, i) => {
+      el.classList.add('reveal', `reveal-d${i + 1}`);
+      revealObserver.observe(el);
+    });
   }
 }
 initIndex();
